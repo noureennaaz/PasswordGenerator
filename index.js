@@ -12,6 +12,7 @@ const SymbolStr='!@#$%^&{)>}/~*(_+-=]\\`[|?/₹<';
 const indicator=document.querySelector('[indicator]');
 const generate=document.querySelector('[FinalButton]');
 var count=0;
+
 // Initial values
 
 let passwordLength=10;
@@ -24,7 +25,7 @@ let password="";
 // copy
 // generate password 
 // set indicator
-
+setIndicatorColor("#ccc");
 handleSlider();
 
 function handleSlider()
@@ -37,6 +38,7 @@ function handleSlider()
 function setIndicatorColor(color)
 {
     indicator.style.backgroundColor=color;
+    indicator.style.boxShadow='0px 0px 12px 1px ${color}';
 
 }
 
@@ -94,7 +96,7 @@ function indicate()
 function copyfunction()
 {
     try{
-        navigator.clipboard.writeText(password.value);
+        navigator.clipboard.writeText(passwordOp.value);
         copyMsg.innerText="copied";
     }
     catch(e){
@@ -117,7 +119,7 @@ sliderval.addEventListener('input' ,(e)=>{
 });
 
 copyButton.addEventListener( 'click' ,()=>{
-    if(password.value)
+    if(passwordOp.value)
        copyfunction();
 })
 
