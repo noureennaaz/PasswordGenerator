@@ -11,7 +11,7 @@
 }
 .active
 {
-    opacity: 1;
+    opacity: 80%;
 }
 .checkbox{
     display: flex;
@@ -27,7 +27,7 @@
     appearance: none;
     width: 15px;
     height: 15px;
-    border:1px solid rgba(49, 150, 218, 0.507);
+    border:2px solid rgba(49, 150, 218, 0.774);
     cursor: pointer;
     position: relative;
     border-radius: 0.35rem;
@@ -48,7 +48,8 @@
     width:1.2rem;
     border-radius: 100%;
     background-color:#edf8ff;
-    box-shadow: 0px 0px 8px 0px hsl(202, 37%, 73%);
+    box-shadow: 0px 0px 8px 0px hsl(221, 52%, 46%);
+    outline: 1px blueviolet;
     appearance: none;
     cursor: pointer;
     transition: all 100ms ease-in;
@@ -58,8 +59,7 @@
 
 
 /* Left  */
-.slider::-webkit-slider-thumb :hover {
-    outline: 2px solid hsl(202, 88%, 37%);
-    background-color: hsl(202, 94%, 56%);
-    /* box-shadow:0px 0px 8px 0px #38b3ff; */
+.slider::-webkit-slider-thumb:hover {
+    background-color: hsl(202, 51%, 53%);
+    box-shadow:0px 0px 8px 0px #feffff;
 }

@@ -32,13 +32,14 @@ function handleSlider()
 {
     sliderval.value=passwordLength;
     displayLength.innerText=passwordLength;
+    sliderval.style.backgroundSize=((passwordLength*100)/20)+"% 100%";
 
 }
 // setIndicatorColor(yellow);
 function setIndicatorColor(color)
 {
     indicator.style.backgroundColor=color;
-    indicator.style.boxShadow='0px 0px 12px 1px ${color}';
+    indicator.style.boxShadow=`0px 0px 7px ${color}`;
 
 }
 
@@ -78,10 +79,10 @@ function indicate()
     if(symbols.checked) sym=true;
     if(numbers.checked) num=true;
     
-   if(passwordLength>=5 && IsUpper && IsLower && num && sym)
+   if((passwordLength>=5 &&( IsUpper && IsLower && num && sym) )||((IsLower|| IsUpper ) && (num||sym) && passwordLength>9))
       setIndicatorColor('#f00');
 
-    else if(passwordLength>=8 && IsUpper && IsLower &&(sym || num))
+    else if((passwordLength>=8 && IsUpper && IsLower &&(sym || num))||length<5)
        setIndicatorColor("#0f0");
     else if((IsLower|| IsUpper ) && (num||sym) && passwordLength>=6)
        setIndicatorColor('#ff0');
@@ -106,7 +107,7 @@ function copyfunction()
 
     //to make the copied message visible
     copyMsg.classList.add('active'); 
-    setTimeout( ()=> {copyMsg.classList.remove("active");},2000);
+    setTimeout( ()=> {copyMsg.classList.remove("active")},2000);
 
 
 }

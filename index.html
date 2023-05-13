@@ -25,16 +25,20 @@
             
             <div class="bg-[#ffffff88] w-full flex justify-between my-3 px-4 text-blue-800 rounded border-b-2 border-indigo-500 relative m-[1.5px] p-[.35rem]">
                 <input disabled placeholder="PASSWORD"  class="bg-transparent placeholder:text-blue-800 opacity-80 font-semibold text-[.80rem]" generatedPassword >
+
+                
                 <button copy-button>
-                    <span text-copied ></span>
+                    
                     <img src="./assets/copy.svg" alt="" class="h-[28px]" >
                 </button>
+               
             </div>
+            <span text-copied class="opacity-0 z-10 bg-blue-500 absolute top-[23vh] left-[61vw] rounded"></span>
 
             <!-- bottom container -->
-            <div  class="bg-[#ffffff88] rounded px-4 flex flex-col gap-4 justify-around  text-blue-950 border-b-2 border-indigo-500">
+            <div  class="bg-[#ffffff88] rounded px-4 flex flex-col gap-2 justify-around  text-blue-950 border-b-2 border-indigo-500">
                 <!-- upper -->
-                <div class="py-3">
+                <div class="py-2">
 
                     <!-- Length -->
                     <div class="flex flex-row justify-between items-center tracking-wide leading-7 font-semibold text-sm" >
@@ -45,7 +49,7 @@
 
                     
 
-                    <input Slider type="range" min="1" max="20" step="1" class="slider h-[.5rem] appearance-none w-full cursor-pointer outline-none bg-no-repeat rounded-lg mt-[2rem] mb-[1.5rem] bg-gradient-to-r from-indigo-300 to-blue-500 outline-0 outline-cyan-500 focus:active:outline-2 -z-10 p-0 " >
+                    <input Slider type="range" min="1" max="20" step="1" class="slider h-[.5rem] appearance-none w-full cursor-pointer outline-none bg-no-repeat rounded-lg mt-[1rem] mb-[1.5rem] bg-gradient-to-r from-indigo-400 to-blue-500 outline-0 outline-cyan-500 focus:active:outline-2 -z-10" >
 
                      <!-- Checkboxes -->
                      <div class="checkbox">
@@ -67,13 +71,13 @@
 
                 </div>
                 <!-- Strength info -->
-                <div class="flex items-center justify-between font-semibold opacity-90">
+                <div class="flex justify-between font-semibold opacity-90 ">
                     
                     <p>Strength</p>
                     <div class="rounded-full w-[1.1rem] h-[1.1rem]  shadow-white shadow-2xl" indicator></div>
                 </div>
                  <!-- Final Button -->
-                <button FinalButton class="rounded bg-indigo-300 w-[90%] self-center leading-9 mb-2 border-b-2 border-sky-900 hover:scale-[102%] drop-shadow-lg">Generate Password</button>
+                <button FinalButton class="rounded bg-indigo-300 w-[90%] self-center leading-9 mb-4 border-b-2 border-sky-900 hover:scale-[102%] drop-shadow-lg">Generate Password</button>
                 
             </div>
         </div>
