@@ -1,5 +1,9 @@
 {
+
+  "main":"tailwind.config.js",
   "scripts": {
+    "tailwind":"npx tailwindcss -i ./src/input.css -o./build/css/style.css --watch",
+    "prettier":"mpx prettier --write ./build/*.html",
     "start": "vite",
     "build": "vite build"
   },
@@ -7,6 +11,7 @@
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.1",
-    "vite": "^4.3.2"
+    "vite": "^4.3.2",
+    "prettier-plugin-tailwindcss":"^0.1.13"
   }
 }
